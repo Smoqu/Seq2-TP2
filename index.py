@@ -10,10 +10,9 @@ binary = tb(number)
 if len(binary) > how_many_bits:
     print(f"Binary number inserted is over: {how_many_bits}")
 elif number >= 0:
-    result = az(str(binary), how_many_bits - len(binary))
+    result = az(binary, how_many_bits - len(binary))
     print(f"Le complément à 2 de l'entier {number} sur {how_many_bits} bits est {result}")
 else:
     abs_binary = tb(abs(number))
-    print(rvs(abs_binary))
-    result = rvs(az(rvs(abs_binary), how_many_bits - len(abs_binary)))
-    print(f"Le complément à 2 de l'entier {number} sur {how_many_bits} bits est {result}")
+    result = rvs(az(abs_binary, how_many_bits - len(abs_binary)))
+    print(f"Le complément à 2 de l'entier {number} sur {how_many_bits} bits est {result} ")
